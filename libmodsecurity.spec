@@ -8,6 +8,7 @@ Release:        1%{?dist}
 Summary:        LibModSecurity
 License:        Apache License 2.0
 URL:            http://www.modsecurity.org/
+BuildArch:      x86_64
 Group:          System Environment/Daemons
 Source0:        https://github.com/SpiderLabs/ModSecurity/releases/download/%{version}/modsecurity-%{version}.tar.gz
 Source1:        https://github.com/SpiderLabs/ModSecurity/releases/download/%{version}/modsecurity-%{version}.tar.gz.asc
