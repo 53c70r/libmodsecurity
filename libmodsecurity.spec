@@ -35,7 +35,6 @@ Libmodsecurity is one component of the ModSecurity v3 project. The library codeb
 make %{?_smp_mflags}
 
 %install
-[ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
 %make_install
 
 %files
