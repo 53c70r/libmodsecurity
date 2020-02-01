@@ -12,7 +12,7 @@ Group:          System Environment/Daemons
 Source0:        https://github.com/SpiderLabs/ModSecurity/releases/download/%{version}/modsecurity-%{version}.tar.gz
 Source1:        https://github.com/SpiderLabs/ModSecurity/releases/download/%{version}/modsecurity-%{version}.tar.gz.asc
 
-BuildRequires:  g++
+BuildRequires:  gcc-c++
 BuildRequires:  pcre-devel
 BuildRequires:  zlib-devel
 BuildRequires:  libtool
