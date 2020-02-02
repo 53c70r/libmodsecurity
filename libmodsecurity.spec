@@ -30,6 +30,9 @@ Libmodsecurity is one component of the ModSecurity v3 project. The library codeb
 %prep
 %setup -q -n modsecurity-%{version}
 
+%clean
+[ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
+
 %build
 ./build.sh
 ./configure
