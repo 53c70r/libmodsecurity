@@ -6,7 +6,7 @@ Epoch:          1
 Version:        3.0.4
 Release:        1%{?dist}
 Summary:        LibModSecurity
-License:        Apache License 2.0
+License:        ASL 2.0
 URL:            http://www.modsecurity.org/
 BuildArch:      x86_64
 Group:          System Environment/Daemons
