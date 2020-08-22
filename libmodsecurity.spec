@@ -7,6 +7,7 @@ Version:        3.0.4
 Release:        1%{?dist}
 Summary:        LibModSecurity
 License:        ASL 2.0
+BuildArch:      x86_64
 URL:            http://www.modsecurity.org/
 Group:          System Environment/Daemons
 Source0:        https://github.com/SpiderLabs/ModSecurity/releases/download/v%{version}/modsecurity-v%{version}.tar.gz
@@ -23,6 +24,9 @@ BuildRequires:  libcurl-devel
 BuildRequires:  yajl-devel
 BuildRequires:  lmdb-devel
 BuildRequires:  libxslt-devel
+BuildRequires:  ssdeep-devel
+BuildRequires:  lua-devel
+
 
 %description
 Libmodsecurity is one component of the ModSecurity v3 project. The library codebase serves as an interface to ModSecurity Connectors taking in web traffic and applying traditional ModSecurity processing. In general, it provides the capability to load/interpret rules written in the ModSecurity SecRules format and apply them to HTTP content provided by your application via Connectors.
