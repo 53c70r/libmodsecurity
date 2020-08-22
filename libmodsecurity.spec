@@ -11,6 +11,7 @@ URL:            http://www.modsecurity.org/
 Group:          System Environment/Daemons
 Source0:        https://github.com/SpiderLabs/ModSecurity/releases/download/v%{version}/modsecurity-v%{version}.tar.gz
 Source1:        https://github.com/SpiderLabs/ModSecurity/releases/download/v%{version}/modsecurity-v%{version}.tar.gz.asc
+Source2:        LICENSE
 
 BuildRequires:  gcc-c++
 BuildRequires:  pcre-devel
@@ -35,8 +36,10 @@ Libmodsecurity is one component of the ModSecurity v3 project. The library codeb
 make %{?_smp_mflags}
 
 %install
+%{__install} -p -D -m 644 %{SOURCE2} %{buildroot}%{_datarootdir}/licenses/%{NAME}/LICENSE
 %make_install
 
 %files
 %defattr (-,root,root)
+%{_datarootdir}/licenses/%{NAME}/LICENSE
 /usr/local/modsecurity/
