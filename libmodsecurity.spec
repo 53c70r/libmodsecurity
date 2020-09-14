@@ -2,9 +2,8 @@
 %global debug_package %{nil}
 
 Name:           libmodsecurity
-Epoch:          1
 Version:        3.0.4
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        LibModSecurity
 License:        ASL 2.0
 BuildArch:      x86_64
@@ -22,7 +21,6 @@ BuildRequires:  automake
 BuildRequires:  GeoIP-devel
 BuildRequires:  libcurl-devel
 BuildRequires:  yajl-devel
-BuildRequires:  lmdb-devel
 BuildRequires:  libxslt-devel
 BuildRequires:  ssdeep-devel
 BuildRequires:  lua-devel
@@ -32,7 +30,6 @@ Requires:       yajl
 Requires:       curl
 Requires:       ssdeep
 Requires:       lua
-Requires:       lmdb
 Requires:       libxml2
 
 
@@ -44,7 +41,6 @@ Libmodsecurity is one component of the ModSecurity v3 project. The library codeb
 
 %build
 ./build.sh
-./configure --with-lmdb
 make %{?_smp_mflags}
 
 %install
