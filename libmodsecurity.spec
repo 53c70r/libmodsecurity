@@ -41,6 +41,7 @@ Libmodsecurity is one component of the ModSecurity v3 project. The library codeb
 
 %build
 ./build.sh
+./configure
 make %{?_smp_mflags}
 
 %install
