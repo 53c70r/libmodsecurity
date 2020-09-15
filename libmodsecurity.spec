@@ -3,7 +3,7 @@
 
 Name:           libmodsecurity
 Version:        3.0.4
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        LibModSecurity
 License:        ASL 2.0
 BuildArch:      x86_64
@@ -12,6 +12,8 @@ Group:          System Environment/Daemons
 Source0:        https://github.com/SpiderLabs/ModSecurity/releases/download/v%{version}/modsecurity-v%{version}.tar.gz
 Source1:        https://github.com/SpiderLabs/ModSecurity/releases/download/v%{version}/modsecurity-v%{version}.tar.gz.asc
 Source2:        LICENSE
+
+Patch0:         cve-2020-15598.patch
 
 BuildRequires:  gcc-c++
 BuildRequires:  pcre-devel
@@ -38,6 +40,7 @@ Libmodsecurity is one component of the ModSecurity v3 project. The library codeb
 
 %prep
 %setup -q -n modsecurity-v%{version}
+%patch0 -p0
 
 %build
 ./build.sh
