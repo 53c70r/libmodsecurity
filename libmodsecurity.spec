@@ -41,6 +41,7 @@ Libmodsecurity is one component of the ModSecurity v3 project. The library codeb
 %setup -c -q
 cd modsecurity-v%{VERSION}
 %patch0 -p1
+cd ..
 
 %build
 ./build.sh
