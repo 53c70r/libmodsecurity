@@ -3,7 +3,7 @@
 
 Name:           libmodsecurity
 Version:        3.0.4
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        ModSecurity
 License:        ASL 2.0
 BuildArch:      x86_64
@@ -39,7 +39,7 @@ Libmodsecurity is one component of the ModSecurity v3 project. The library codeb
 
 %prep
 %setup -c -q
-cd modsecurity-%{VERSION}
+cd modsecurity-v%{VERSION}
 %patch0 -p1
 
 %build
