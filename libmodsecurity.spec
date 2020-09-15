@@ -2,15 +2,15 @@
 %global debug_package %{nil}
 
 Name:           modsecurity
-Version:        v3.0.4
+Version:        3.0.4
 Release:        3%{?dist}
 Summary:        ModSecurity
 License:        ASL 2.0
 BuildArch:      x86_64
 URL:            http://www.modsecurity.org/
 Group:          System Environment/Daemons
-Source0:        https://github.com/SpiderLabs/ModSecurity/releases/download/%{version}/modsecurity-%{version}.tar.gz
-Source1:        https://github.com/SpiderLabs/ModSecurity/releases/download/%{version}/modsecurity-%{version}.tar.gz.asc
+Source0:        https://github.com/SpiderLabs/ModSecurity/releases/download/v%{version}/modsecurity-v%{version}.tar.gz
+Source1:        https://github.com/SpiderLabs/ModSecurity/releases/download/v%{version}/modsecurity-v%{version}.tar.gz.asc
 Source2:        LICENSE
 
 Patch0:         cve-2020-15598.patch
@@ -39,7 +39,7 @@ Requires:       libxml2
 Libmodsecurity is one component of the ModSecurity v3 project. The library codebase serves as an interface to ModSecurity Connectors taking in web traffic and applying traditional ModSecurity processing. In general, it provides the capability to load/interpret rules written in the ModSecurity SecRules format and apply them to HTTP content provided by your application via Connectors.
 
 %prep
-%setup -q
+%setup -c -q
 %patch0
 
 %build
