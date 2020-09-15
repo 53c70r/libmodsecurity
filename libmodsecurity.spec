@@ -47,11 +47,10 @@ Libmodsecurity is one component of the ModSecurity v3 project. The library codeb
 make %{?_smp_mflags}
 
 %install
-#%{__install} -p -D -m 644 %{SOURCE2} %{buildroot}%{_datarootdir}/licenses/%{NAME}/LICENSE
+%{__install} -p -D -m 644 %{SOURCE2} %{buildroot}%{_datarootdir}/licenses/%{NAME}/LICENSE
 %make_install
 
 %files
 %defattr (-,root,root)
-%license LICENSE
 %{_datarootdir}/licenses/%{NAME}/LICENSE
 /usr/local/modsecurity/
