@@ -1,10 +1,10 @@
 %global _hardened_build 1
 %global debug_package %{nil}
 
-Name:           libmodsecurity
+Name:           modsecurity
 Version:        3.0.4
 Release:        3%{?dist}
-Summary:        LibModSecurity
+Summary:        ModSecurity
 License:        ASL 2.0
 BuildArch:      x86_64
 URL:            http://www.modsecurity.org/
@@ -48,10 +48,11 @@ Libmodsecurity is one component of the ModSecurity v3 project. The library codeb
 make %{?_smp_mflags}
 
 %install
-%{__install} -p -D -m 644 %{SOURCE2} %{buildroot}%{_datarootdir}/licenses/%{NAME}/LICENSE
+#%{__install} -p -D -m 644 %{SOURCE2} %{buildroot}%{_datarootdir}/licenses/%{NAME}/LICENSE
 %make_install
 
 %files
 %defattr (-,root,root)
+%license LICENSE
 %{_datarootdir}/licenses/%{NAME}/LICENSE
 /usr/local/modsecurity/
