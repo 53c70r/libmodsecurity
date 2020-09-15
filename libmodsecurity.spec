@@ -1,7 +1,7 @@
 %global _hardened_build 1
 %global debug_package %{nil}
 
-Name:           modsecurity
+Name:           libmodsecurity
 Version:        3.0.4
 Release:        3%{?dist}
 Summary:        ModSecurity
