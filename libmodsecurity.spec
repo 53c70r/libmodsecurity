@@ -26,7 +26,6 @@ BuildRequires:  yajl-devel
 BuildRequires:  libxslt-devel
 BuildRequires:  ssdeep-devel
 BuildRequires:  lua-devel
-BuildRequires:  lmdb-devel
 BuildRequires:  gnupg2
 
 Requires:       flex
@@ -34,7 +33,6 @@ Requires:       yajl
 Requires:       curl
 Requires:       ssdeep
 Requires:       libxml2
-Requires:       lmdb
 
 %description
 Libmodsecurity is one component of the ModSecurity v3 project. The library codebase serves as an interface to ModSecurity Connectors taking in web traffic and applying traditional ModSecurity processing. In general, it provides the capability to load/interpret rules written in the ModSecurity SecRules format and apply them to HTTP content provided by your application via Connectors.
