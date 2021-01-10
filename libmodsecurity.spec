@@ -27,6 +27,7 @@ BuildRequires:  libxslt-devel
 BuildRequires:  ssdeep-devel
 BuildRequires:  lua-devel
 BuildRequires:  lmdb-devel
+BuildRequires:  gnupg2
 
 Requires:       flex
 Requires:       yajl
