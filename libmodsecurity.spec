@@ -1,9 +1,9 @@
 %global _hardened_build 1
 %global debug_package %{nil}
 
-Name:           libmodsecurity
+Name:           nginx-libmodsecurity
 Version:        3.0.4
-Release:        6%{?dist}
+Release:        7%{?dist}
 Summary:        ModSecurity
 License:        ASL 2.0
 BuildArch:      x86_64
@@ -32,7 +32,6 @@ Requires:       flex
 Requires:       yajl
 Requires:       curl
 Requires:       ssdeep
-Requires:       lua
 Requires:       libxml2
 Requires:       lmdb
 
