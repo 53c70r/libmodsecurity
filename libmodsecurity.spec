@@ -3,7 +3,7 @@
 
 Name:           nginx-libmodsecurity
 Version:        3.0.4
-Release:        8%{?dist}
+Release:        9%{?dist}
 Summary:        ModSecurity
 License:        ASL 2.0
 BuildArch:      x86_64
@@ -25,7 +25,6 @@ BuildRequires:  libcurl-devel
 BuildRequires:  yajl-devel
 BuildRequires:  libxslt-devel
 BuildRequires:  ssdeep-devel
-BuildRequires:  lua-devel
 BuildRequires:  gnupg2
 Obsoletes:      libmodsecurity
 Obsoletes:      libmodsecurity-devel
