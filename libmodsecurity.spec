@@ -6,7 +6,7 @@ Version:        3.0.4
 Release:        9%{?dist}
 Summary:        ModSecurity
 License:        ASL 2.0
-BuildArch:      x86_64
+BuildArch:      noarch
 URL:            http://www.modsecurity.org/
 Group:          System Environment/Daemons
 Source0:        https://github.com/SpiderLabs/ModSecurity/releases/download/v%{version}/modsecurity-v%{version}.tar.gz
