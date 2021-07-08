@@ -2,8 +2,8 @@
 %global debug_package %{nil}
 
 Name:           nginx-libmodsecurity
-Version:        3.0.4
-Release:        9%{?dist}
+Version:        3.0.5
+Release:        1%{?dist}
 Summary:        ModSecurity
 License:        ASL 2.0
 BuildArch:      x86_64
@@ -13,7 +13,6 @@ Source0:        https://github.com/SpiderLabs/ModSecurity/releases/download/v%{v
 Source1:        https://github.com/SpiderLabs/ModSecurity/releases/download/v%{version}/modsecurity-v%{version}.tar.gz.asc
 Source2:        LICENSE
 Source100:      modsecurity.gpg
-Patch0:         cve-2020-15598.patch
 
 BuildRequires:  gcc-c++
 BuildRequires:  pcre-devel
@@ -43,7 +42,6 @@ Libmodsecurity is one component of the ModSecurity v3 project. The library codeb
 cat %{SOURCE100} > %{_builddir}/modsecurity.gpg
 %{gpgverify} --keyring='%{_builddir}/modsecurity.gpg' --signature='%{SOURCE1}' --data='%{SOURCE0}'
 %setup -q -n modsecurity-v%{VERSION}
-%patch0 -p1
 
 %build
 ./build.sh
