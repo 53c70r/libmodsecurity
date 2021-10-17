@@ -1,6 +1,6 @@
 %global _hardened_build 1
 
-Name:           nginx-libmodsecurity
+Name:           libmodsecurity-nginx
 Version:        3.0.5
 Release:        5%{?dist}
 Summary:        ModSecurity
