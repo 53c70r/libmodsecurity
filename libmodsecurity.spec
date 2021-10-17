@@ -18,6 +18,7 @@ BuildRequires: flex
 BuildRequires: bison
 BuildRequires: git-core
 BuildRequires: ssdeep-devel
+BuildRequires: gnupg
 BuildRequires: pkgconfig(libxml-2.0)
 BuildRequires: pkgconfig(yajl)
 BuildRequires: pkgconfig(libcurl)
