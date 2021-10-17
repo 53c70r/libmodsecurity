@@ -3,7 +3,7 @@
 
 Name:           nginx-libmodsecurity
 Version:        3.0.5
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        ModSecurity
 License:        ASL 2.0
 BuildArch:      x86_64
@@ -36,7 +36,11 @@ Requires:       libxml2
 
 
 %description
-Libmodsecurity is one component of the ModSecurity v3 project. The library codebase serves as an interface to ModSecurity Connectors taking in web traffic and applying traditional ModSecurity processing. In general, it provides the capability to load/interpret rules written in the ModSecurity SecRules format and apply them to HTTP content provided by your application via Connectors.
+Libmodsecurity is one component of the ModSecurity v3 project.
+The library codebase serves as an interface to ModSecurity Connectors taking in web
+traffic and applying traditional ModSecurity processing.
+In general, it provides the capability to load/interpret rules written in the ModSecurity
+SecRules format and apply them to HTTP content provided by your application via Connectors.
 
 %prep
 cat %{SOURCE100} > %{_builddir}/modsecurity.gpg
@@ -50,9 +54,9 @@ make %{?_smp_mflags}
 
 %install
 %make_install
-%{__install} -p -D -m 0644 %{SOURCE2} %{buildroot}%{_datarootdir}/licenses/%{NAME}/LICENSE
 
 %files
+%license LICENSE
 %defattr (-,root,root)
 /usr/local/modsecurity/
 %{_datarootdir}/licenses/%{NAME}/LICENSE
