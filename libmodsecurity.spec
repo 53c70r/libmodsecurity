@@ -2,7 +2,7 @@
 
 Name:           nginx-libmodsecurity
 Version:        3.0.5
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        ModSecurity
 License:        ASL 2.0
 URL:            http://www.modsecurity.org/
@@ -58,12 +58,12 @@ applications that use %{name}.
 %prep
 cat %{SOURCE100} > %{_builddir}/modsecurity.gpg
 %{gpgverify} --keyring='%{_builddir}/modsecurity.gpg' --signature='%{SOURCE1}' --data='%{SOURCE0}'
-%setup -q -n modsecurity-v%{VERSION}
+%autosetup -n modsecurity-v%{VERSION} -S git
 
 %build
-./build.sh
-./configure
-make %{?_smp_mflags}
+# removed --with-lmdb
+%configure --libdir=%{_libdir}
+%make_build
 
 %install
 %make_install
