@@ -1,8 +1,8 @@
 %global _hardened_build 1
 
 Name:           libmodsecurity-nginx
-Version:        3.0.5
-Release:        5%{?dist}
+Version:        3.0.6
+Release:        1%{?dist}
 Summary:        ModSecurity
 License:        ASL 2.0
 URL:            http://www.modsecurity.org/
