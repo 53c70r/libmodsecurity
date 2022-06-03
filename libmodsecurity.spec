@@ -83,6 +83,13 @@ cat %{SOURCE100} > %{_builddir}/modsecurity.gpg
 %{_libdir}/pkgconfig
 %license LICENSE
 
-#%files static
-#%{_libdir}/*.a
-#%{_libdir}/*.la
+%if 0%{?fedora} == 35
+%files static
+%{_libdir}/*.a
+%{_libdir}/*.la
+%endif
+
+%if 0%{?fedora} == 36
+%files static
+%{_libdir}/*.a
+%endif
