@@ -83,6 +83,6 @@ cat %{SOURCE100} > %{_builddir}/modsecurity.gpg
 %{_libdir}/pkgconfig
 %license LICENSE
 
-%files static
-%{_libdir}/*.a
-%{_libdir}/*.la
+#%files static
+#%{_libdir}/*.a
+#%{_libdir}/*.la
