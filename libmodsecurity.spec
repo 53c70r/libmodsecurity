@@ -2,7 +2,7 @@
 
 Name:           libmodsecurity-nginx
 Version:        3.0.7
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        ModSecurity
 License:        ASL 2.0
 URL:            http://www.modsecurity.org/
@@ -26,9 +26,9 @@ BuildRequires: pkgconfig(geoip)
 BuildRequires: pkgconfig(libpcre)
 BuildRequires: pkgconfig(lmdb)
 
-Obsoletes:      libmodsecurity
-Obsoletes:      libmodsecurity-devel
-Obsoletes:      libmodsecurity-static
+Conflicts:      libmodsecurity
+Conflicts:      libmodsecurity-devel
+Conflicts:      libmodsecurity-static
 
 %description
 Libmodsecurity is one component of the ModSecurity v3 project.
