@@ -27,9 +27,9 @@ BuildRequires:  pkgconfig(geoip)
 BuildRequires:  pkgconfig(libpcre)
 BuildRequires:  pkgconfig(lmdb)
 
-Obsoletes:      libmodsecurity
-Obsoletes:      libmodsecurity-devel
-Obsoletes:      libmodsecurity-static
+Conflicts:      libmodsecurity
+Conflicts:      libmodsecurity-devel
+Conflicts:      libmodsecurity-static
 
 Requires:       lmdb
 
@@ -86,6 +86,13 @@ cat %{SOURCE100} > %{_builddir}/modsecurity.gpg
 %{_libdir}/pkgconfig
 %license LICENSE
 
+%if 0%{?fedora} == 35
 %files static
 %{_libdir}/*.a
 %{_libdir}/*.la
+%endif
+
+%if 0%{?fedora} == 36
+%files static
+%{_libdir}/*.a
+%endif
