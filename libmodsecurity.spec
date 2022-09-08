@@ -2,7 +2,7 @@
 
 Name:           libmodsecurity-nginx
 Version:        3.0.8
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        ModSecurity
 License:        ASL 2.0
 URL:            http://www.modsecurity.org/
@@ -64,8 +64,7 @@ cat %{SOURCE100} > %{_builddir}/modsecurity.gpg
 %autosetup -n modsecurity-v%{VERSION} -S git
 
 %build
-# removed --with-lmdb
-%configure --libdir=%{_libdir}
+%configure --libdir=%{_libdir} --with-lmdb
 %make_build
 
 %install
