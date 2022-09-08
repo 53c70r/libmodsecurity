@@ -1,7 +1,7 @@
 %global _hardened_build 1
 
 Name:           libmodsecurity-nginx
-Version:        3.0.6
+Version:        3.0.8
 Release:        1%{?dist}
 Summary:        ModSecurity
 License:        ASL 2.0
@@ -11,24 +11,27 @@ Source0:        https://github.com/SpiderLabs/ModSecurity/releases/download/v%{v
 Source1:        https://github.com/SpiderLabs/ModSecurity/releases/download/v%{version}/modsecurity-v%{version}.tar.gz.asc
 Source100:      modsecurity.gpg
 
-BuildRequires: gcc-c++
-BuildRequires: automake
-BuildRequires: make
-BuildRequires: flex
-BuildRequires: bison
-BuildRequires: git-core
-BuildRequires: ssdeep-devel
-BuildRequires: gnupg
-BuildRequires: pkgconfig(libxml-2.0)
-BuildRequires: pkgconfig(yajl)
-BuildRequires: pkgconfig(libcurl)
-BuildRequires: pkgconfig(geoip)
-BuildRequires: pkgconfig(libpcre)
-BuildRequires: pkgconfig(lmdb)
+BuildRequires:  gcc-c++
+BuildRequires:  automake
+BuildRequires:  make
+BuildRequires:  flex
+BuildRequires:  bison
+BuildRequires:  git-core
+BuildRequires:  ssdeep-devel
+BuildRequires:  gnupg
+BuildRequires:  lmdb-devel
+BuildRequires:  pkgconfig(libxml-2.0)
+BuildRequires:  pkgconfig(yajl)
+BuildRequires:  pkgconfig(libcurl)
+BuildRequires:  pkgconfig(geoip)
+BuildRequires:  pkgconfig(libpcre)
+BuildRequires:  pkgconfig(lmdb)
 
 Obsoletes:      libmodsecurity
 Obsoletes:      libmodsecurity-devel
 Obsoletes:      libmodsecurity-static
+
+Requires:       lmdb
 
 %description
 Libmodsecurity is one component of the ModSecurity v3 project.
