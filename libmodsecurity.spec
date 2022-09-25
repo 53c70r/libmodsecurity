@@ -2,7 +2,7 @@
 
 Name:           libmodsecurity-nginx
 Version:        3.0.8
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        ModSecurity
 License:        ASL 2.0
 URL:            http://www.modsecurity.org/
@@ -26,11 +26,7 @@ BuildRequires:  pkgconfig(libcurl)
 BuildRequires:  pkgconfig(geoip)
 BuildRequires:  pkgconfig(libpcre)
 BuildRequires:  pkgconfig(lmdb)
-
 Conflicts:      libmodsecurity
-Conflicts:      libmodsecurity-devel
-Conflicts:      libmodsecurity-static
-
 Requires:       lmdb
 
 %description
@@ -45,6 +41,7 @@ by your application via Connectors.
 %package devel
 Summary: Development files for %{name}
 Requires: %{name}%{?_isa} = %{version}-%{release}
+Conflicts:      libmodsecurity-devel
 
 %description devel
 The %{name}-devel package contains libraries and header files for
@@ -53,6 +50,7 @@ developing applications that use %{name}.
 %package static
 Summary: Development files for %{name}
 Requires: %{name}%{?_isa} = %{version}-%{release}
+Conflicts:      libmodsecurity-static
 
 %description static
 The %{name}-static package contains static libraries for developing
