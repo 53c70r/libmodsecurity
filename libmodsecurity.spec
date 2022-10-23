@@ -2,7 +2,7 @@
 
 Name:           libmodsecurity-nginx
 Version:        3.0.8
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        ModSecurity
 License:        ASL 2.0
 URL:            http://www.modsecurity.org/
@@ -83,13 +83,6 @@ cat %{SOURCE100} > %{_builddir}/modsecurity.gpg
 %{_libdir}/pkgconfig
 %license LICENSE
 
-%if 0%{?fedora} == 35
 %files static
 %{_libdir}/*.a
 %{_libdir}/*.la
-%endif
-
-%if 0%{?fedora} == 36
-%files static
-%{_libdir}/*.a
-%endif
