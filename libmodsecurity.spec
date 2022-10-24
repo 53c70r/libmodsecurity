@@ -2,11 +2,12 @@
 
 Name:           libmodsecurity-nginx
 Version:        3.0.8
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        ModSecurity
 License:        ASL 2.0
 URL:            http://www.modsecurity.org/
 Group:          System Environment/Daemons
+BuildArch:	noarch
 Source0:        https://github.com/SpiderLabs/ModSecurity/releases/download/v%{version}/modsecurity-v%{version}.tar.gz
 Source1:        https://github.com/SpiderLabs/ModSecurity/releases/download/v%{version}/modsecurity-v%{version}.tar.gz.asc
 Source100:      modsecurity.gpg
