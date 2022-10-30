@@ -2,7 +2,7 @@
 
 Name:           libmodsecurity-nginx
 Version:        3.0.8
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        ModSecurity
 License:        ASL 2.0
 URL:            http://www.modsecurity.org/
@@ -12,22 +12,18 @@ Source1:        https://github.com/SpiderLabs/ModSecurity/releases/download/v%{v
 Source100:      modsecurity.gpg
 
 BuildRequires:  gcc-c++
-BuildRequires:  automake
 BuildRequires:  make
 BuildRequires:  flex
 BuildRequires:  bison
 BuildRequires:  git-core
 BuildRequires:  ssdeep-devel
 BuildRequires:  gnupg
-BuildRequires:  lmdb-devel
 BuildRequires:  pkgconfig(libxml-2.0)
 BuildRequires:  pkgconfig(yajl)
 BuildRequires:  pkgconfig(libcurl)
 BuildRequires:  pkgconfig(geoip)
 BuildRequires:  pkgconfig(libpcre)
-BuildRequires:  pkgconfig(lmdb)
 Conflicts:      libmodsecurity
-Requires:       lmdb
 
 %description
 Libmodsecurity is one component of the ModSecurity v3 project.
@@ -62,7 +58,7 @@ cat %{SOURCE100} > %{_builddir}/modsecurity.gpg
 %autosetup -n modsecurity-v%{VERSION} -S git
 
 %build
-%configure --libdir=%{_libdir} --with-lmdb
+%configure --libdir=%{_libdir}
 %make_build
 
 %install
