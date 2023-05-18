@@ -2,7 +2,7 @@
 
 Name:           libmodsecurity-nginx
 Version:        3.0.9
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        ModSecurity
 License:        ASL 2.0
 URL:            http://www.modsecurity.org/
@@ -21,7 +21,6 @@ BuildRequires:  gnupg
 BuildRequires:  pkgconfig(libxml-2.0)
 BuildRequires:  pkgconfig(yajl)
 BuildRequires:  pkgconfig(libcurl)
-BuildRequires:  pkgconfig(geoip)
 BuildRequires:  pkgconfig(libpcre)
 Conflicts:      libmodsecurity
 
